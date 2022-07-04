@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended", 
+    "plugin:@typescript-eslint/recommended", 
+    "plugin:prettier/recommended", 
+    "prettier/@typescript-eslint", 
+    "plugin:react/recommended"
+  ],
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["@typescript-eslint", "prettier", "react"],
+  "rules": {
+    "eqeqeq": "error",
+    "no-return-await": "error",
+    "no-param-reassign": "error",
+    "require-await": "error",
+    "prettier/prettier": "error"
+  }
+}
