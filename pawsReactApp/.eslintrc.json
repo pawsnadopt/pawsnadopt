@@ -15,6 +15,10 @@
         "@typescript-eslint/no-shadow": ["error"],
         "no-shadow": "off",
         "no-undef": "off",
+        "eqeqeq": "error",
+        "no-return-await": "error",
+        "no-param-reassign": "error",
+        "require-await": "error",
         "prettier/prettier": "error"
       }
     }
