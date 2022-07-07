@@ -1,4 +1,4 @@
-import StorybookUI from './storybook'
+import StorybookUI from '../storybook'
 import Config from 'react-native-config'
 import React, {type PropsWithChildren} from 'react'
 import {

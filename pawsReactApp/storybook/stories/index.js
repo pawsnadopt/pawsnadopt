@@ -1,2 +1,2 @@
-import './Button/Button.stories';
-import './Welcome/Welcome.stories';
+import './UI/atoms/Button.stories';
+import './UI/screens/Welcome.stories';
