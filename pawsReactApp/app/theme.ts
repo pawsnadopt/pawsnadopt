@@ -31,6 +31,8 @@ const theme = createTheme({
     mainBackground: palette.white,
     cardPrimaryBackground: palette.greenPrimary,
     buttonPrimaryBackground: palette.pinkPrimary,
+    buttonShadow: palette.pinkDark,
+    buttonText: palette.white,
   },
   spacing: {
     s: 8,

@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 // Auto-generated file created by react-native-storybook-loader
 // Do not edit.
 //

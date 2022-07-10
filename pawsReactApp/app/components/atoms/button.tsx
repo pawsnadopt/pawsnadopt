@@ -1,17 +1,43 @@
+// Button.tsx
 import React from 'react'
-import PropTypes from 'prop-types'
-import {TouchableHighlight} from 'react-native'
+import {BoxProps, TextProps} from '@shopify/restyle'
+import {ActivityIndicator, TouchableHighlight} from 'react-native'
+import {Theme} from '../../theme'
+import Box from './box'
+import Text from './text'
 
-export default function Button({onPress, children}) {
-  return <TouchableHighlight onPress={onPress}>{children}</TouchableHighlight>
-}
+type ButtonProps = {
+  text: string
+  onPress: () => void
+  loading?: boolean
+  textProps?: TextProps<Theme>
+} & Partial<BoxProps<Theme>>
 
-Button.defaultProps = {
-  children: null,
-  onPress: () => {},
-}
+const Button: React.FC<ButtonProps> = ({
+  text,
+  onPress,
+  loading,
+  textProps,
+  ...props
+}) => (
+  <TouchableHighlight underlayColor="transparent" onPress={onPress}>
+    <Box
+      backgroundColor="buttonPrimaryBackground"
+      borderRadius={8}
+      shadowOffset={{height: 2, width: 0}}
+      shadowRadius={5}
+      shadowColor="buttonShadow"
+      shadowOpacity={0.2}
+      {...props}>
+      {loading ? (
+        <ActivityIndicator color="buttonShadow" />
+      ) : (
+        <Text color="buttonText" {...textProps}>
+          {text}
+        </Text>
+      )}
+    </Box>
+  </TouchableHighlight>
+)
 
-Button.propTypes = {
-  children: PropTypes.node,
-  onPress: PropTypes.func,
-}
+export default Button
