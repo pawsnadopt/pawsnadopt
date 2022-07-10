@@ -1,3 +1,5 @@
+import StorybookUI from '../storybook'
+import Config from 'react-native-config'
 import React, {type PropsWithChildren} from 'react'
 import {
   SafeAreaView,
@@ -104,4 +106,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default App
+export default Config.LOAD_STORYBOOK === 'true' ? StorybookUI : App
