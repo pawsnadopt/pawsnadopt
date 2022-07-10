@@ -64,3 +64,6 @@ buck-out/
 
 # Cosmos
 cosmos.userdeps.js
+
+# Env
+.env

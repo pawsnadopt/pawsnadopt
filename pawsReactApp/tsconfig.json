@@ -7,6 +7,6 @@
 
     /* Completeness */
     "skipLibCheck": true, 
-    "esModuleInterop": true                        /* Skip type checking all .d.ts files. */
+    "esModuleInterop": true                       /* Skip type checking all .d.ts files. */
   }
 }

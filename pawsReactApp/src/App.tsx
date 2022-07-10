@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
 import {NativeFixtureLoader} from 'react-cosmos/native'
+import {Text} from 'react-native'
+import Config from 'react-native-config'
 // You generate cosmos.userdeps.js when you start the Cosmos server
-import {rendererConfig, fixtures, decorators} from './cosmos.userdeps.js'
+import {rendererConfig, fixtures, decorators} from '../cosmos.userdeps.js'
 
-class App extends Component {
+export class Cosmos extends Component {
   render() {
     return (
       <NativeFixtureLoader
@@ -15,4 +17,10 @@ class App extends Component {
   }
 }
 
-export default Config.LOAD_COSMOS === 'true' ? StorybookUI : App
+class App extends Component {
+  render() {
+    return <Text>Hello World</Text>
+  }
+}
+
+export default Config.LOAD_COSMOS === 'true' ? Cosmos : App
