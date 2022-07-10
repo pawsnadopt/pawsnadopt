@@ -1,14 +1,24 @@
-import React from 'react'
-import {action} from '@storybook/addon-actions'
-import {withKnobs} from '@storybook/addon-knobs'
-import {storiesOf} from '@storybook/react-native'
-import Button from '../../../../src/components/atoms/button'
-import Text from '../../../../src/components/atoms/text'
-
-import CenterView from '../../CenterView'
+/* eslint-disable no-undef */
+import React from 'react';
+import { action } from '@storybook/addon-actions';
+import { text } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react-native';
+import { Button, Text } from '../../../../src/components';
 
 storiesOf('Button', module)
-  .addDecorator(withKnobs)
-  .add('Default', () => {
-    <Button text={<Text>Click Me 😀 😎 👍 💯</Text>} onPress={action('clicked-text')} />
-  })
+  .addDecorator((getStory) => {getStory()})
+  .add('with text', () => (
+    <Button onPress={action('clicked-text')}>
+      <Text>{text('Button text', 'Hello Button')}</Text>
+    </Button>
+  ))
+  .add('with some emoji', () => (
+    <Button onPress={action('clicked-emoji')}>
+      <Text>😀 😎 👍 💯</Text>
+    </Button>
+  ))
+  .add('loading', () => (
+    <Button onPress={action('loading')} loading>
+      <Text>Test</Text>
+    </Button>
+  ))

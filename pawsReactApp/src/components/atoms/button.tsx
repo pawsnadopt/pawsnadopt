@@ -13,7 +13,7 @@ type ButtonProps = {
   textProps?: TextProps<Theme>
 } & Partial<BoxProps<Theme>>
 
-const Button: React.FC<ButtonProps> = ({
+const _Button: React.FC<ButtonProps> = ({
   text,
   onPress,
   loading,
@@ -40,4 +40,4 @@ const Button: React.FC<ButtonProps> = ({
   </TouchableHighlight>
 )
 
-export default Button
+export default _Button

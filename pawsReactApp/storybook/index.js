@@ -4,12 +4,17 @@ import { AppRegistry, Platform } from 'react-native';
 import {appName} from '../app.json'
 import { getStorybookUI, configure, addDecorator } from '@storybook/react-native';
 import { withKnobs } from '@storybook/addon-knobs';
-import {loadStories} from '../storybook/storyLoader'
+import {loadStories} from '../storybook/storyLoader';
+import { ThemeProvider } from '@shopify/restyle';
+import CenterView from './stories/CenterView';
 
 import './rn-addons';
 
+
 // enables knobs for all stories
 addDecorator(withKnobs);
+addDecorator(CenterView)
+addDecorator(ThemeProvider);
 
 // import stories
 configure(() => {
