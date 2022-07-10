@@ -1,8 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/no-var-requires */
-// if you use expo remove this line
 import { AppRegistry, Platform } from 'react-native';
-
+import {appName} from '../app.json'
 import { getStorybookUI, configure, addDecorator } from '@storybook/react-native';
 import { withKnobs } from '@storybook/addon-knobs';
 import {loadStories} from '../storybook/storyLoader'
@@ -22,6 +21,6 @@ const StorybookUIRoot = getStorybookUI({
   asyncStorage: require('@react-native-community/async-storage').default
 });
 
-AppRegistry.registerComponent('pawsReactApp', () => StorybookUIRoot);
+AppRegistry.registerComponent(appName, () => StorybookUIRoot);
 
 export default StorybookUIRoot;
