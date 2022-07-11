@@ -1,7 +1,12 @@
 import React from 'react'
 import {Text} from 'react-native'
 
-export function Hello({greeting, name}) {
+type helloProps = {
+  greeting: string
+  name: string
+}
+
+export function Hello({greeting, name}: helloProps) {
   return (
     <Text>
       {greeting}, {name}!
