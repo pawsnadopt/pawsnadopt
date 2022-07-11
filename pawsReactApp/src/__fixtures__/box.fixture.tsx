@@ -3,7 +3,13 @@ import Box from '../components/atoms/box'
 import Text from '../components/atoms/text'
 
 export default (
-  <Box justifyContent="center" backgroundColor="primary" width="l" height="l">
+  <Box
+    flex={1}
+    justifyContent="center"
+    backgroundColor="primary"
+    width="xl"
+    height="xl"
+    shadowColor="boxShadow">
     <Text variant="header" textAlign="center">
       Box Component
     </Text>

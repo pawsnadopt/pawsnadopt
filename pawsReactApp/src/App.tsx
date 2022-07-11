@@ -27,4 +27,5 @@ class App extends Component {
   }
 }
 
-export default Config.LOAD_COSMOS === 'true' ? Cosmos : App
+export default Config.LOAD_COSMOS === 'true' ? Cosmos : Cosmos
+
